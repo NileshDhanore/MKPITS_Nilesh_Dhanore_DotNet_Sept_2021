@@ -1,4 +1,4 @@
-/* This is LCM_no._Program */
+/* This is HCF_no._Program */
 /* pre processor directive */
 #include<stdio.h>
 /* global variable declaration */

@@ -7,11 +7,11 @@ int main()
   int i,a,b;
   printf("Enter two numbers");
   scanf("%d %d",&a,&b);
-  for(i=(a>b?a:b);i>=1;i--)
+  for(i=(a>b?a:b);i<=a*b;i+=(a>b?a:b))
   {
-    if(a%i==0 && b%i==0)
+    if(i%a==0 && i%b==0)
      {
-       printf("The HCF of numbers is =%d",i);
+       printf("The LCM of numbers is =%d",i);
 	   break;
  
      }
