@@ -18,7 +18,7 @@ long long k=LLONG_MAX;
 unsigned long long l=ULLONG_MAX;
 
 
-printf("\n Maximum Int value \na=%d \nb=%d \nc=%d \nd=%d \ne=%d \nf=%d \ng=%d \nh=%d \ni=%d \nj=%d \nk=%d \nl=%d",a,b,c,d,e,f,g,h,i,j,k,l);
+printf("\n Maximum Int value \na=%d \nb=%d \nc=%d \nd=%d \ne=%d \nf=%d \ng=%d \nh=%lld \ni=%ld \nj=%d \nk=%d \n=%d",a,b,c,d,e,f,g,h,i,j,k,l);
 return 0;
 
 }
