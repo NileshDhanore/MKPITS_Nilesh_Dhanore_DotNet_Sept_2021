@@ -1,0 +1,14 @@
+body{
+background-color:bisque;
+}
+table{
+background-color:chocolate;
+color:greenyellow;
+border:5px groove black;
+padding:12px;
+width:400px;
+}
+td{
+align-context:center;
+font-family:'franklin Gothic Medium", "Arial Narrow",Arial;
+}
