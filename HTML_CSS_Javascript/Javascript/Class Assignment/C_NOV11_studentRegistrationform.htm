@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body>
+   
+    <form>
+         <table width="300px" border="1">
+        <caption>Student Registration Form</caption>
+        <tr>
+           <th>First Name</th>
+           <th>Last Name</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="Fname" ></td>
+            <td><input type="text" id="Lname" ></td>
+         </tr>
+
+         <tr>
+             <td><input type="radio" id="r1" name="r" value="male">male</td>
+             <td><input type="radio" id="r2" name="r" value="female">female</td>
+         </tr>
+         <tr>   
+         <td colspan="2" align="center"> <input type="Button" value="Submit" onclick="personal_info()"></td>
+         </tr>
+
+</table>
+<form>
+   <script>
+       function personal_info()
+       {
+         firstname=document.getElementById("Fname").value;
+         lastname=document.getElementById("Lname").value;
+       
+          if(document.getElementById("r1").checked==true)
+       gender=document.getElementById("r1").value;
+       else
+       gender=document,getElementById("r2").value;
+              alert(firstname+ " " +lastname + " is "  +gender);            //fistname and last name is as same which is return in the (getElementById)
+       }
+       </script>
+</body>
+</html>

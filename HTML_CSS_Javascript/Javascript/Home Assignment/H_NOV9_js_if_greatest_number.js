@@ -1,10 +1,11 @@
-var i;
-document.write("The Numbers are");
-console.log("The Numbers are");
-for(i=1; i<=10;i++)
+var a=100,b=200;
+if(a>b)
 {
-document.write("<br>");
-console.log("<br>");
-document.write(+i);
-console.log(+i);
+document.write(a);
+console.log(a);
+}
+else
+{
+document.write(b);
+console.log(b);
 }

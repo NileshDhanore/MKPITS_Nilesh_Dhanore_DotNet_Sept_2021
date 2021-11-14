@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        </head>
+        <title>object full name</title><head>
+    </head>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<p id="demo"></p>
+<button type="button" onclick="this.innerHTML = Date()">The time is?</button>
+
+<script>
+// Create an object:
+const employee = {
+  id:10001,
+  firstname: "Nilesh",
+  lastname: "Dhanore",
+  salary:35000,                       //yellow color is  used for function
+  fullname :function()                //blue color is used to indicate property
+  {
+      return this.firstname + " " + this.lastname;
+  }
+};
+
+// Display some data from the object:
+document.getElementById("demo").innerHTML = " Employee name is " +employee.fullname() + " <br>Employid " +employee.id + "<br> salary of employee Rs.  " +employee.salary;
+</script>
+
+</body>
+</html>
