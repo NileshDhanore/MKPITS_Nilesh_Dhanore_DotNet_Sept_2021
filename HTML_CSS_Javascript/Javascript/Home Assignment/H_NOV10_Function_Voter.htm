@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Voter Eligibility Checker</h2>
+
+<script>
+var name;
+name=prompt("Enter the name of voter");
+age=parseInt(prompt("Enter Age of Voter"));
+document.write("<br>" +name + " of age "+age +"You are" +VoterValidity(name,age));
+function VoterValidity(name,age)
+{
+if(age>18)
+document.write(" eligible for voting");
+else
+document.write(" not eligible for voting");
+}
+
+</script>
+
+</body>
+</html>

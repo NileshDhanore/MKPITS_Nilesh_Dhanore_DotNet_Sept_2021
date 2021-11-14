@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>fahrenheit to celcius converter</h2>
+<p id="demo"> </p>
+
+<script>
+document.getElementById("demo").innerHTML= "The value 2450gm is : " +gmTokg()+"kg" +gmTogm() + "gm";
+function gmTokg()
+{
+let gm;
+let kg;
+gm=2450;
+kg=gm/1000;
+return kg;
+}
+function gmTogm()
+{
+var gm;
+gm=2450;
+temp=gm%1000;
+return temp;
+}
+
+</script>
+
+</body>
+</html>

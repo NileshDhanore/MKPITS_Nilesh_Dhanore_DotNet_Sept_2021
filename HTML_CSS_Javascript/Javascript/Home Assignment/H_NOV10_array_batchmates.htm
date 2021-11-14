@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2> This is Array Batchmate Program</h2>
+<p id="demo"></p>
+
+<script>
+const batchmates=["Akash", "Sachin", "Akshay", "Nilesh"];
+document.getElementById("demo").innerHTML = batchmates;
+document.write("My Batchmates name : ");
+for(b in batchmates)
+document.write("<br>"+batchmates[b]);
+console.log(+batchmates[b]);
+document.write("<br>My Batchmates name : ");
+for (b of batchmates)
+document.write( "<br>" +b);
+</script>
+
+</body>
+</html>
