@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="mydbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="catagory">
+          <Key>
+            <PropertyRef Name="catid" />
+          </Key>
+          <Property Name="catid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="catname" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'mydb.dbo.department' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="department">
+          <Property Name="dep_id" Type="varchar" MaxLength="5" />
+          <Property Name="dep_name" Type="varchar" MaxLength="25" />
+          <Property Name="dep_location" Type="varchar" MaxLength="15" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'mydb.dbo.employee' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="employee">
+          <Property Name="id" Type="int" />
+          <Property Name="fname" Type="varchar" MaxLength="20" />
+          <Property Name="lname" Type="varchar" MaxLength="20" />
+          <Property Name="salary" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="departnent" Type="varchar" MaxLength="15" />
+          <Property Name="city" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'mydb.dbo.employees' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="employees">
+          <Property Name="emp_id" Type="int" />
+          <Property Name="emp_name" Type="varchar" MaxLength="25" />
+          <Property Name="emp_salary" Type="decimal" Precision="7" Scale="2" />
+          <Property Name="empdep_id" Type="varchar" MaxLength="5" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'mydb.dbo.indiancar' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="indiancar">
+          <Property Name="carid" Type="int" />
+          <Property Name="carname" Type="varchar" MaxLength="20" />
+          <Property Name="brand" Type="varchar" MaxLength="20" />
+          <Property Name="model" Type="varchar" MaxLength="20" />
+          <Property Name="price" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="modelyear" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'mydb.dbo.products' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="products">
+          <Property Name="id" Type="int" />
+          <Property Name="p_name" Type="varchar" MaxLength="12" />
+          <Property Name="price" Type="int" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="catogry_no" Type="int" />
+        </EntityType>-->
+        <EntityType Name="Project_Category_table">
+          <Key>
+            <PropertyRef Name="catid" />
+          </Key>
+          <Property Name="catid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="catname" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Project_Product_table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Productname" Type="varchar" MaxLength="60" />
+          <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="MFD" Type="date" />
+          <Property Name="catid" Type="int" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="roll_no" />
+          </Key>
+          <Property Name="roll_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fname" Type="varchar" MaxLength="20" />
+          <Property Name="lname" Type="varchar" MaxLength="20" />
+          <Property Name="math_marks" Type="int" />
+          <Property Name="eng_marks" Type="int" />
+          <Property Name="scince_marks" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'mydb.dbo.students' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="students">
+          <Property Name="id" Type="int" />
+          <Property Name="fname" Type="varchar" MaxLength="11" />
+          <Property Name="lname" Type="varchar" MaxLength="8" />
+          <Property Name="branch" Type="varchar" MaxLength="20" />
+          <Property Name="city" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'mydb.dbo.teachers' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="teachers">
+          <Property Name="id" Type="int" />
+          <Property Name="fname" Type="varchar" MaxLength="12" />
+          <Property Name="lname" Type="varchar" MaxLength="10" />
+          <Property Name="qualification" Type="varchar" MaxLength="15" />
+          <Property Name="catogry" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+        <Association Name="FK__Project_P__catid__40C49C62">
+          <End Role="Project_Category_table" Type="Self.Project_Category_table" Multiplicity="0..1" />
+          <End Role="Project_Product_table" Type="Self.Project_Product_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project_Category_table">
+              <PropertyRef Name="catid" />
+            </Principal>
+            <Dependent Role="Project_Product_table">
+              <PropertyRef Name="catid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="mydbModelStoreContainer">
+          <EntitySet Name="catagory" EntityType="Self.catagory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Category_table" EntityType="Self.Project_Category_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Product_table" EntityType="Self.Project_Product_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Project_P__catid__40C49C62" Association="Self.FK__Project_P__catid__40C49C62">
+            <End Role="Project_Category_table" EntitySet="Project_Category_table" />
+            <End Role="Project_Product_table" EntitySet="Project_Product_table" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mydbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="catagory">
+          <Key>
+            <PropertyRef Name="catid" />
+          </Key>
+          <Property Name="catid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="catname" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Project_Category_table">
+          <Key>
+            <PropertyRef Name="catid" />
+          </Key>
+          <Property Name="catid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="catname" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Project_Product_table" Relationship="Self.FK__Project_P__catid__40C49C62" FromRole="Project_Category_table" ToRole="Project_Product_table" />
+        </EntityType>
+        <EntityType Name="Project_Product_table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Productname" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="MFD" Type="DateTime" Precision="0" />
+          <Property Name="catid" Type="Int32" />
+          <NavigationProperty Name="Project_Category_table" Relationship="Self.FK__Project_P__catid__40C49C62" FromRole="Project_Product_table" ToRole="Project_Category_table" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="roll_no" />
+          </Key>
+          <Property Name="roll_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="lname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="math_marks" Type="Int32" />
+          <Property Name="eng_marks" Type="Int32" />
+          <Property Name="scince_marks" Type="Int32" />
+        </EntityType>
+        <Association Name="FK__Project_P__catid__40C49C62">
+          <End Role="Project_Category_table" Type="Self.Project_Category_table" Multiplicity="0..1" />
+          <End Role="Project_Product_table" Type="Self.Project_Product_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project_Category_table">
+              <PropertyRef Name="catid" />
+            </Principal>
+            <Dependent Role="Project_Product_table">
+              <PropertyRef Name="catid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="mydbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="catagories" EntityType="Self.catagory" />
+          <EntitySet Name="Project_Category_table" EntityType="Self.Project_Category_table" />
+          <EntitySet Name="Project_Product_table" EntityType="Self.Project_Product_table" />
+          <EntitySet Name="students" EntityType="Self.student" />
+          <AssociationSet Name="FK__Project_P__catid__40C49C62" Association="Self.FK__Project_P__catid__40C49C62">
+            <End Role="Project_Category_table" EntitySet="Project_Category_table" />
+            <End Role="Project_Product_table" EntitySet="Project_Product_table" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mydbModelStoreContainer" CdmEntityContainer="mydbEntities">
+          <EntitySetMapping Name="catagories">
+            <EntityTypeMapping TypeName="mydbModel.catagory">
+              <MappingFragment StoreEntitySet="catagory">
+                <ScalarProperty Name="catid" ColumnName="catid" />
+                <ScalarProperty Name="catname" ColumnName="catname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Category_table">
+            <EntityTypeMapping TypeName="mydbModel.Project_Category_table">
+              <MappingFragment StoreEntitySet="Project_Category_table">
+                <ScalarProperty Name="catid" ColumnName="catid" />
+                <ScalarProperty Name="catname" ColumnName="catname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Product_table">
+            <EntityTypeMapping TypeName="mydbModel.Project_Product_table">
+              <MappingFragment StoreEntitySet="Project_Product_table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Productname" ColumnName="Productname" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="MFD" ColumnName="MFD" />
+                <ScalarProperty Name="catid" ColumnName="catid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="mydbModel.student">
+              <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="roll_no" ColumnName="roll_no" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="math_marks" ColumnName="math_marks" />
+                <ScalarProperty Name="eng_marks" ColumnName="eng_marks" />
+                <ScalarProperty Name="scince_marks" ColumnName="scince_marks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,58 @@
+﻿@model First_Program_MVC.Models.student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.math_marks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.math_marks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eng_marks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eng_marks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.scince_marks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.scince_marks)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.roll_no }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

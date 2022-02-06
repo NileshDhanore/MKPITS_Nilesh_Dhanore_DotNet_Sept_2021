@@ -1,0 +1,51 @@
+﻿@using Helper_Methods_MVC.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<table>@Html.BeginForm("Index","Home",FormMethod.Get)
+    <caption>Student Registration</caption>
+    <tr>
+        <td>First Name :   </td>
+        <td>@Html.TextBox("Firstname")</td>
+    </tr>
+
+    <tr>
+        <td>Last Name :   </td>
+        <td>@Html.TextBox("Lastname")</td>
+    </tr>
+
+    <tr>
+        <td>Gender :   </td>
+        <td>@Html.RadioButton("r1","Male")Male @Html.RadioButton("r1","Female")Female</td>
+    </tr>
+
+    <tr>
+        <td>Address :  </td>
+        <td>@Html.TextArea("Address")</td>
+    </tr>
+
+    <tr>
+        <td>Courses :  </td>
+        <td>
+            @Html.CheckBox("Asp")ASP.NET
+            @Html.CheckBox("MVC")Asp.net MVC
+            @Html.CheckBox("C#")C#
+         </td>
+    </tr>
+
+    <tr>
+        <td>City : </td>
+        <td>@Html.DropDownList("City",new SelectList(Enum.GetValues(typeof(City))),
+           "Select City",
+           new
+           {
+               @class = "form-control"
+           })
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="2"><input type="Submit" value="Submit"></td>
+    </tr>
+</table>

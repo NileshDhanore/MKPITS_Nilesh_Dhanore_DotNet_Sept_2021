@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Different_Actiom_HelperMethods", "Different_Actiom_HelperMethods.csproj", "{05CB3F8A-490B-4F52-9E32-765B043A1DEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05CB3F8A-490B-4F52-9E32-765B043A1DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CB3F8A-490B-4F52-9E32-765B043A1DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CB3F8A-490B-4F52-9E32-765B043A1DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CB3F8A-490B-4F52-9E32-765B043A1DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9DC0F91-FB26-45E4-BCDA-80481D6D6DF8}
+	EndGlobalSection
+EndGlobal

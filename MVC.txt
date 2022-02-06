@@ -1,0 +1,7 @@
+Model-Views-Controller  MVC
+
+Asp .net framework
+1. Asp .net wesite webpage name is display in website
+
+mvc
+only name of controller is shown

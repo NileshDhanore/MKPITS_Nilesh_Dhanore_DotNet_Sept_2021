@@ -1,0 +1,45 @@
+﻿@model MVC_Form_Ccllection_Study.Models.student
+@{
+    ViewBag.Title = "New Student";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
+            {
+    @Html.AntiForgeryToken()
+<table>
+    <tr>
+        <td>
+            FirstName :
+        </td>
+        <td>
+            @Html.TextBox("fname")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            LastName:
+        </td>
+        <td>
+            @Html.TextBox("lname")
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            Maths Marks:
+        </td>
+        <td>
+            @Html.TextBox("math_marks")
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="submit" />
+
+        </td>
+    </tr>
+</table>
+            }
+    

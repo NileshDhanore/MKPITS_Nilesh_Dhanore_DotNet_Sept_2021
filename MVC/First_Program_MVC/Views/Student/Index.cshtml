@@ -1,0 +1,57 @@
+﻿@model IEnumerable<First_Program_MVC.Models.student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.math_marks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eng_marks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.scince_marks)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.math_marks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eng_marks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.scince_marks)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.roll_no }) |
+            @Html.ActionLink("Details", "Details", new { id=item.roll_no }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.roll_no })
+        </td>
+    </tr>
+}
+
+</table>
