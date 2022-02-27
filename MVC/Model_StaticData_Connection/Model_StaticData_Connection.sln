@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model_StaticData_Connection", "Model_StaticData_Connection.csproj", "{AEF4D968-003C-4D8B-B9D1-183BA2E11E2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "..\Business\Business.csproj", "{12F177DF-DE4D-4E0F-8639-0710217B349C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEF4D968-003C-4D8B-B9D1-183BA2E11E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF4D968-003C-4D8B-B9D1-183BA2E11E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF4D968-003C-4D8B-B9D1-183BA2E11E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF4D968-003C-4D8B-B9D1-183BA2E11E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F177DF-DE4D-4E0F-8639-0710217B349C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F177DF-DE4D-4E0F-8639-0710217B349C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F177DF-DE4D-4E0F-8639-0710217B349C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F177DF-DE4D-4E0F-8639-0710217B349C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {990B8DDA-8D97-4992-8A8C-2D03263B453A}
+	EndGlobalSection
+EndGlobal
