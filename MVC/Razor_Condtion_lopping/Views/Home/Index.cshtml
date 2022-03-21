@@ -1,0 +1,45 @@
+﻿@using Razor_Condtion_lopping.Models
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+ 
+        @{ 
+            var a=8;
+         }
+    <div>
+        @if(a==8)
+        {
+            <h1>if condition executed</h1>
+        }
+    </div>
+    <div>
+        @(a==8?"if condition using ternary executed":"if is nor execued")
+    </div>
+    <div>
+        @{
+            var myList = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            Employee emp = new Employee() { Id = 1, Name = "Nilesh" };
+        }
+    </div>
+
+
+    <div>
+        @foreach(var obj in myList)
+            {
+                <h3>
+                    My index is @obj
+                </h3>
+
+            }
+    </div>
+    <div>
+        <h3>ID = @emp.Id</h3>
+        <h3>Name = @emp.Name</h3>
+    </div>
+</body>
+</html>

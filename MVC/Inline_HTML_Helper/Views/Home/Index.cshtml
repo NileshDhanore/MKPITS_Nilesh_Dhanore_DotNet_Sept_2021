@@ -1,0 +1,30 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @helper MyfirstHelper(string[] str)     
+    {
+    
+        <ul>
+            @foreach (var item in str)
+            {
+            <li>
+                @item
+            </li>
+            }
+        </ul>
+    }
+    </div>
+    <div>
+        <label> Name list</label>
+
+    </div>
+</body>
+</html>

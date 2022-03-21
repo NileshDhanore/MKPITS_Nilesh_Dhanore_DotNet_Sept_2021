@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Registration form";
+}
+
+<p style="margin-top:5%">
+    <div align="center" style="background-color:antiquewhite;border:solid;border-radius:20px;width:40%">
+
+
+
+        @using (Html.BeginForm())
+        {
+            <h2>Registration-Page</h2>
+            @*<hr style="color:black;border:solid"/>*@
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @*@Html.Label("NAME", new { style = "font-size:large;color:red" }*@
+                    @Html.Label("NAME", new { @class = "text-danger" })
+                    <div class="col-md-10">
+                        @Html.TextBox("t1", " ", new { @class = "form-control", title="plz enter name" , placeholder = " name " })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("MOTHER NAME", new { @class = "text-danger" })
+                    <div class="col-md-10">
+                        @Html.TextBox("t2", " ", new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("AGE", new { @class = "text-danger" })
+                    <div class="col-md-10">
+                        @Html.Editor("e1", new { HtmlAttributes = new { @class = "form-control" } })
+
+                    </div>
+                </div>
+                <div>
+                    @Html.Label("CITY", new { @class = "text-danger" })
+                </div>
+                <div>
+                    @Html.DropDownList("D1", new SelectList(new[] { "nagpur", "patana", "delhi", "mumbai" }), "select", new { @class = "form-control" })
+
+                </div>
+
+                <div>
+                    @Html.Label("MALE", new { @class = "text-danger" })       @Html.RadioButton("gender", "male", true)
+                    @Html.Label("FEMALE", new { @class = "text-danger" })    @Html.RadioButton("gender", "female")
+
+                </div>
+
+                <div>
+                    @Html.Label("cricket", new { @class = "text-danger" })       @Html.CheckBox("cricket", true)
+                    @Html.Label("football", new { @class = "text-danger" })      @Html.CheckBox("football")
+                    @Html.Label("volyball", new { @class = "text-danger" })      @Html.CheckBox("volyball")
+                    @Html.Label("polo", new { @class = "text-danger" })          @Html.CheckBox("polo")
+
+                </div>
+
+                <div>
+                    @Html.Label("ADDRESS", new { @class = "text-danger" })
+                </div>
+
+                <div>
+                    @Html.TextArea("tb1", " ", 5, 12, new { @class = "form-control" })
+                </div>
+
+                <div style="margin-top:10px;margin-bottom:10px">
+                    <input type="submit" value="SUBMIT" class="btn-success" />
+                </div>
+
+            </div>
+
+        }
+
+    </div>
+</p>

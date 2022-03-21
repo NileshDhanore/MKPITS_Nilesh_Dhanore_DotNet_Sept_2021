@@ -1,0 +1,22 @@
+﻿@model Strongly_Type_Helper_Method_Reg_Page.Models.Employee
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Registration Page</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Id)
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.Id, " ", new { @class = "form-control" , placeholder="name"})
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Age)
+    </div>
+    <div>
+        @Html.EditorFor(m => m.Age, new {HtmlAttributes = new { @class = "form-control" } })
+    </div>
+}
